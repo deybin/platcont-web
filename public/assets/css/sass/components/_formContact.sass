@@ -1,0 +1,124 @@
+.container-form
+    padding: 0 5%
+    max-width: 720px
+    width: 100%
+    margin-right: auto
+    margin-left: auto
+    .content-center
+        text-align: center
+        p
+            text-opacity: 1
+            color: #6c757d
+        .divider
+            height: 0.2rem
+            max-width: 3.25rem
+            margin: 1.5rem auto
+            background-color: #4fca29
+            opacity: 1
+.form-body
+    flex-shrink: 0
+    width: 100%
+    max-width: 100%
+    padding-right: 1.5rem
+    padding-left: 1.5rem
+    margin-top: 1.5rem
+    .form-content
+        padding: 1rem 0.75rem
+        .form-floating
+            position: relative
+            margin-bottom: 1rem
+            > label
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                padding: 1rem 0.75rem
+                pointer-events: none
+                border: 1px solid transparent
+                transform-origin: 0 0
+                transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out
+                font-size: 0.8em
+                font-weight: 600
+                letter-spacing: 0.1em
+                color: rgba(0, 0, 0, 0.7)
+                transition: 0.5s
+            .form-control
+                height: calc(3.5rem + 2px)
+                line-height: 1.25
+                display: block
+                width: 100%
+                padding: 0.375rem 0.75rem
+                font-size: 1rem
+                font-weight: 400
+                line-height: 1.5
+                color: #212529
+                background-color: #fff
+                background-clip: padding-box
+                border: 1px solid #ced4da
+                -webkit-appearance: none
+                -moz-appearance: none
+                appearance: none
+                border-radius: 0.25rem
+                transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+                &::placeholder
+                    color: transparent
+                &:focus
+                    color: #212529
+                    padding-top: 1.625rem
+                    padding-bottom: 0.625rem
+                    background-color: #fff
+                    outline: 0
+                    line-height: 2
+                    box-shadow: 0 0 0.25rem #4fca29
+                    ~label
+                        padding-top: 1.625rem
+                        padding-bottom: 0.625rem
+                        opacity: 0.65
+                        transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem)
+                &:not(:placeholder-shown)
+                    opacity: 0.65
+                    padding-top: 1.625rem
+                    padding-bottom: 0.625rem
+                    ~ label
+                        opacity: 0.65
+                        padding-top: 1.625rem
+                        padding-bottom: 0.625rem
+                        transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem)
+            .textarea
+                width: 100%
+                height: 10rem
+                > label
+                    font-size: 1rem
+.d-grid
+    display: flex
+    justify-content: center
+    align-items: center
+.btn-send
+    border-color: #43be1e
+    background-color: #43be1e
+    color: #fff
+    height: 40px
+    min-width: 130px
+    text-decoration: none
+    width: 100%
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    border: none
+    border-radius: 5px
+    display: flex
+    align-items: center
+    justify-content: center
+    &:hover
+        background-color: #fff
+        color: #111
+        font-weight: bold
+        border-color: #2e631e
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+    a
+        text-decoration: none
+        color: #fff
+        padding-top: 12px
+        padding-bottom: 12px
+        display: block
+        white-space: normal

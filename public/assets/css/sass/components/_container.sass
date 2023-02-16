@@ -1,0 +1,335 @@
+.main-head
+	position: relative
+	.head-banner
+		display: flex
+		-webkit-box-orient: horizontal
+		-webkit-box-direction: normal
+		-webkit-flex-direction: row
+		-moz-box-orient: horizontal
+		-moz-box-direction: normal
+		-ms-flex-direction: row
+		flex-direction: row
+		-webkit-box-align: center
+		-webkit-align-items: center
+		-moz-box-align: center
+		-ms-flex-align: center
+		align-items: center
+		-webkit-box-pack: center
+		-webkit-justify-content: center
+		-moz-box-pack: center
+		-ms-flex-pack: center
+		justify-content: center
+		// height: 64px
+		background: #43be1e
+		padding: 8px
+		// font-size: 17px
+		.banner__text
+			color: #FFF
+		.banner__link
+			color: #FFF
+			margin-left: 8px
+			cursor: pointer
+			display: inline
+			text-decoration: none
+			display: inline-flex
+			align-items: center
+			.link__text
+				border-bottom: 0 solid transparent
+				transition: all .2s ease-in-out
+				font-weight: 600
+				a
+					text-decoration: none
+					color: #fff
+					padding-top: 12px
+					padding-bottom: 12px
+					display: block
+					white-space: normal
+				&:hover
+					border-color: #FFF
+					margin-left: 0
+					border-bottom: 2px solid
+					margin-right: 4px
+					// a
+					// 	text-decoration: none
+					// 	color: #fff
+					// 	padding-top: 12px
+					// 	padding-bottom: 12px
+					// 	display: block
+					// 	white-space: normal
+			.link__icon
+				font-size: 20px
+	.head-img
+		background-image: url(/img/banner/banner.jpg)
+		height: -webkit-calc(100vh - 54px)
+		height: -moz-calc(100vh - 54px)
+		height: calc(100vh - 54px)
+		background-repeat: no-repeat
+		background-position: center
+		-moz-background-size: cover
+		-o-background-size: cover
+		background-size: cover
+		position: unset
+		.img__gradient
+			height: 200px
+			position: absolute
+			display: none
+			background: -webkit-gradient(linear,left top,left bottom,color-stop(73.43%,rgba(255,255,255,0)),color-stop(89.91%,#FFF))
+			background: -webkit-linear-gradient(top,rgba(255,255,255,0) 73.43%,#FFF 89.91%)
+			background: oldlinear-gradient(top,rgba(255,255,255,0) 73.43%,#FFF 89.91%) -moz-
+			background: -o-linear-gradient(top,rgba(255,255,255,0) 73.43%,#FFF 89.91%)
+			background: linear-gradient(180deg,rgba(255,255,255,0) 73.43%,#FFF 89.91%)
+			width: 100%
+			bottom: 0
+			// z-index: 1
+
+	.head-container-img
+		position: absolute
+		top: 0
+		background-image: url('../img/platcont-view.png')
+		background-repeat: no-repeat
+		width: 100%
+		height: 100%
+.head-detail
+	width: 100%
+	position: absolute
+	// z-index: 1
+	top: 0
+	.main-container
+		max-width: 1600px
+		width: 100%
+		margin: auto
+		padding: 0 5%
+		// padding: 5px
+.container-content
+	margin-top: 20%
+	// display: grid
+	// max-width: 100%
+	// height: calc(100vh - 350px)
+	// grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr))
+	.text
+		display: flex
+		align-items: flex-start
+		flex-direction: column
+		justify-content: center
+		color: #fff
+		>p
+			text-align: left
+			margin: 0.5rem 0 5rem
+			font-size: 1.7rem
+		>h1
+			font-size: 3rem
+	.image-banner
+		min-width: 400px
+		position: relative
+		.banner-img
+			min-width: 400px
+			min-height: 400px
+			width: 100%
+			height: 100%
+			background-image: url('../img/globo.png')
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center
+			.img-reference
+				// background-image: url('../img/platcont-view.png')
+				background-repeat: no-repeat
+				width: 100%
+				height: 100%
+
+@media (max-width: 1023px)
+	.main-head
+		.head-img
+			height: 50vh
+			background-position: right
+			position: relative
+			.img__gradient
+				display: unset
+	.container-content .text
+		>p
+			text-align: left
+			margin: .5rem 0 5rem
+			font-size: 1.7rem
+			color: #fff
+
+@media (max-width: 700px)
+	.main-head
+		.head-detail
+			position: relative
+	.container-content .text
+		>p
+			text-align: left
+			margin: .5rem 0 5rem
+			font-size: 1.7rem
+			color: #111
+/* Que es platcont */
+.container-section-tabs
+	// background-color: #efefef
+	padding-top: 22px
+	// margin-top: 7rem
+// .main-tabs
+// 	margin: 0 48px
+.tabs
+	display: grid
+	position: relative
+	// grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr))
+	gap: 4px
+	h2
+		text-align: center
+		margin-bottom: 3rem
+.container-tabs
+	position: relative
+	padding: 0 5%
+	// padding: 12px
+	// margin: 16px
+	& .dropdawn-container
+		margin-bottom: 1rem
+// .content-consumer
+// 	background-color: azure
+.tab-header
+	text-align: center
+	width: 590px
+	margin: 0 auto 16px
+	padding-top: 72px
+	color: #111
+	font-weight: 700
+	font-size: 2.31rem
+	max-width: 100%
+.tab-subheader
+	text-align: center
+	width: 582px
+	margin: 20px auto
+	max-width: 100%
+	line-height: 24px
+.dropdawn-container
+	>p
+		position: relative
+		max-height: 0px
+		overflow: hidden
+		transition: all 2s
+		width: 100%
+	& .show
+		max-height: 800px
+		background: #fff
+		color: #111
+		line-height: 1
+		padding: 9px
+		text-align: justify
+		width: 100%
+		max-width: 300px
+		img
+			position: absolute
+			max-width: 100%
+			top: 70%
+			padding: 3rem
+			left: 35%
+			transform: translate(0,-100%)
+			margin: 0
+			width: 60%
+			// margin-left: 30rem
+	& .hide
+		max-height: 0px
+		display: none
+.container-caracteristicas
+	margin: 0px auto
+	max-width: 800px
+.container-row
+	display: grid
+	// position: relative
+	// grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr))
+	// grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr))
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+	// grid-auto-rows: 7rem
+	grid-auto-flow: dense
+	// grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+	gap: 4px
+	text-align: center
+	& .space
+		margin-bottom: 1.5rem
+		padding-left: 15px
+		padding-right: 15px
+		h2
+			font-size: 1rem
+			padding-bottom: 1.2rem
+		p
+			padding-bottom: 1.2rem
+			font-size: 1rem
+		i
+			padding-bottom: 1.2rem
+			font-size: 3.25rem
+			cursor: pointer
+		&.column-2
+			grid-column: 2
+
+.efect-hover:hover
+	color: #46a094
+
+/* Precios */
+
+.layout-header
+	h2
+		text-align: center
+		margin-bottom: 3rem
+	p
+		text-align: center
+		width: 582px
+		margin: 20px auto
+		max-width: 100%
+		line-height: 24px
+.layout-container
+	margin: 3rem 0 3rem 0
+	display: grid
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+
+.layout-info
+	padding: 0 12px 0 12px
+	img
+		width: 100%
+		height: 50%
+
+.price
+	font-weight: 700
+	font-size: 1.5rem
+	span
+		vertical-align: middle
+
+/* Media Queries */
+@media (max-width: 860px)
+	.dropdawn-container
+		.show
+			max-height: 800px
+			background: #fff
+			color: #111
+			line-height: 1
+			padding: 9px
+			text-align: justify
+			width: 100%
+			max-width: 100%
+			img
+				position: relative
+				max-width: 100%
+				left: 0
+				padding: 0
+				transform: translate(0, 5%)
+				overflow: hidden
+				float: center
+@media (max-width: 620px)
+	.container-row
+		display: flex
+		flex-direction: column
+	.dropdawn-container
+		.show
+			max-height: 800px
+			background: #fff
+			color: #111
+			line-height: 1
+			padding: 9px
+			text-align: justify
+			width: 100%
+			max-width: 100%
+			img
+				position: relative
+				max-width: 100%
+				left: 50px
+				padding: 0
+				transform: translate(0, 5%)
+				overflow: hidden

@@ -1,0 +1,4 @@
+<template>
+    <ModulosView />
+    <Footer />
+</template>
