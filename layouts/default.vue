@@ -10,7 +10,7 @@
 
 <script setup>
 // import { Script } from 'vm';
-
+const auth = useState('auth', () => false);
 //utilizar muchas propiedades, permite ingresar al head de la aplicacion
 useHead({
     title: "Platcont",
