@@ -24,18 +24,20 @@
                         <li class="ul__li">
                             <nuxt-link to="/" class="li__text">Inicio</nuxt-link>
                         </li>
-                        <li class="ul__li">
-                            <nuxt-link to="/precios" class="li__text">Precios</nuxt-link>
-                        </li>
-                        <li class="ul__li">
-                            <nuxt-link to="/modulos" class="li__text">Modulos</nuxt-link>
-                        </li>
-                        <li class="ul__li">
-                            <nuxt-link to="/contactanos" class="li__text">Contáctanos</nuxt-link>
-                        </li>
-                        <li class="ul__li">
-                            <nuxt-link to="/appDownload" class="li__text">Descargas</nuxt-link>
-                        </li>
+                        <template v-if="!auth">
+                            <li class="ul__li">
+                                <nuxt-link to="/precios" class="li__text">Precios</nuxt-link>
+                            </li>
+                            <li class="ul__li">
+                                <nuxt-link to="/modulos" class="li__text">Modulos</nuxt-link>
+                            </li>
+                            <li class="ul__li">
+                                <nuxt-link to="/contactanos" class="li__text">Contáctanos</nuxt-link>
+                            </li>
+                            <li class="ul__li">
+                                <nuxt-link to="/appDownload" class="li__text">Descargas</nuxt-link>
+                            </li>
+                        </template>
                         <!-- <li class="ul__li">
                             <nuxt-link to="/nosotros" class="li__text">Nosotros</nuxt-link>
                         </li> -->

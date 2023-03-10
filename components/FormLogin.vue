@@ -8,7 +8,7 @@
                 <!-- start form -->
                 <div class="form-body-login">
                     <div class="form-content">
-                        <form>
+                        <form :id="interaction.form_id">
                             <!-- Email address input-->
                             <div class="floating">
                                 <input class="control" name="email" type="email" placeholder="Correo">
@@ -28,7 +28,7 @@
                                 <button type="button" class="btn-ingresar" @click="login">
                                     Ingresar
                                 </button>
-                            </div> 
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { v4 as uuidv4 } from "uuid";
 
 export default {
     name: 'FormLogin',
@@ -50,33 +51,35 @@ export default {
         return {
             auth:
                 useState('auth'),
-            // dom: {
-            //     email: null,
-            //     password_admin: null
-            // },
-            // interaction: {
-            //     form_id: uuidv4()
-            // }
+            dom: {
+                email: "",
+                password_admin: ""
+            },
+            interaction: {
+                form_id: uuidv4()
+            }
         }
     },
     methods: {
         login() {
-           this.auth = true;
-        //    console.log(useAuth());
-           navigateTo('micuenta')
-        //    useHydration ('auth', (value) => value, this.auth);
+            this.auth = true;
+            //    console.log(useAuth());
+            navigateTo('micuenta')
+            //    useHydration ('auth', (value) => value, this.auth);
             // console.log(this.auth);
-
+            let dat = newDataGenerate(this.interaction.form_id)
+            if (!dat.status) return false
+            let data = dat.data
+            // API("user/login", { data, method: "PUT", token: "false" }).then(response => {
+            //     sessionStorage.setItem("cokie-token", response.token)
+            //     // this.$route.push({name: MiCuenta })
+            // })
         }
         // signupHandler(){
         //     // let dat = newDataGenerate(this.interaction.form_id)
         //     if(!dat.status) return false
         //     let data = dat.data
 
-        //     API("user/login", {data, method: "PUT", token:"false"}).then(response =>{
-        //         sessionStorage.setItem("cokie-token", response.token)
-        //         this.$route.push({name: MiCuenta })
-        //     })
         // }
     },
 };

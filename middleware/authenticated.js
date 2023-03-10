@@ -3,6 +3,6 @@ export default defineNuxtRouteMiddleware(()=> {
    const auth = useState('auth');
    console.log(auth);
    if(!auth.value){
-      return navigateTo('login');
+      return navigateTo('micuenta');
    } 
 });
